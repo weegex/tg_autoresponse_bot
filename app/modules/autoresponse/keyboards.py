@@ -19,17 +19,17 @@ def question() -> InlineKeyboardMarkup:
                     text="Хочу узнать об услугах",
                     callback_data="services"
                 )
-            ],
-            [
-                InlineKeyboardButton(
-                    text="Оставить заказ",
-                    callback_data="create_order"
-                ),
-                InlineKeyboardButton(
-                    text="Другой вопрос",
-                    callback_data="personal_question"
-                )
             ]
+            # [
+            #     InlineKeyboardButton(
+            #         text="Оставить заказ",
+            #         callback_data="create_order"
+            #     ),
+            #     InlineKeyboardButton(
+            #         text="Другой вопрос",
+            #         callback_data="personal_question"
+            #     )
+            # ]
         ]
     )
 
