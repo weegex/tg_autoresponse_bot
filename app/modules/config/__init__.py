@@ -1,10 +1,14 @@
 from setup import bot
 from aiogram import Router, filters, types
+from . import keyboards
 
 
 router = Router()
 
 
-@router.business_message(filters.CommandStart())
+@router.message(filters.CommandStart())
 async def start_command(message: types.Message) -> None:
-    pass
+    await message.answer(
+        "Привет! Я твой автоответчик, чем могу помочь?",
+        reply_markup=keyboards.menu()
+    )
