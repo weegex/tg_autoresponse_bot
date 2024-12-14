@@ -3,16 +3,18 @@ from aiogram.utils.keyboard import ReplyKeyboardBuilder
 
 
 def menu() -> types.ReplyKeyboardMarkup:
-    markup = types.ReplyKeyboardMarkup(
-        keyboard=[],
-        
-    )
-    builder = ReplyKeyboardBuilder.from_markup(markup=markup)
-    builder.button(
-        text="Настройки"
-    )
-    builder.button(
-        text="Тексты"
-    )
+    buttons = [
+        [
+            types.KeyboardButton(
+                text="Настройки"
+            ),
+            types.KeyboardButton(
+                text="Тексты"
+            )
+        ]
+    ]
 
-    return builder.as_markup()
+    return types.ReplyKeyboardMarkup(
+        keyboard=buttons,
+        resize_keyboard=True
+    )
