@@ -8,7 +8,6 @@ def menu() -> types.ReplyKeyboardMarkup:
         
     )
     builder = ReplyKeyboardBuilder.from_markup(markup=markup)
-
     builder.button(
         text="Настройки"
     )
