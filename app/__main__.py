@@ -1,6 +1,6 @@
 import asyncio
+import modules
 from setup import run, dp
-from . import modules
 
 
 dp.include_router(modules.router)
