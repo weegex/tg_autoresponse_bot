@@ -6,8 +6,9 @@ LABEL maintainer="Created by @weegex"
 WORKDIR /appdir
 ENTRYPOINT [ "python", "app" ]
 
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+COPY .env .
 
 # Step 3 - Install python libraries
 COPY requirements.txt .
